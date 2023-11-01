@@ -20,9 +20,9 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
-export default function power(numberToPower: number, power: number){
+export function power(numberToPower: number, power: number) {
     let result = numberToPower
-    for(let iterator = 1; iterator < power; iterator++){
+    for (let iterator = 1; iterator < power; iterator++) {
         result *= numberToPower
     }
     return result

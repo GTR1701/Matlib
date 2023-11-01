@@ -20,7 +20,7 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
-export function multiply(...everyArgument: any): number {
+export function add(...everyArgument: any): number {
     const argumentArrayLength = everyArgument.length
     let result = Array.isArray(everyArgument[0]) ? everyArgument[0][0] : everyArgument[0]
     const firstArgumentOfTypeArray = Array.isArray(everyArgument[0]) ? true : false
@@ -39,11 +39,11 @@ export function multiply(...everyArgument: any): number {
                     console.error("Variable type not assignable to argument of type number or number[]")
                     return 0
                 }
-                result *= currentArray[internalArrayIterator]
+                result += currentArray[internalArrayIterator]
             }
         } else {
             if (iterator === 0) continue
-            result *= everyArgument[iterator]
+            result += everyArgument[iterator]
         }
     }
     return result
